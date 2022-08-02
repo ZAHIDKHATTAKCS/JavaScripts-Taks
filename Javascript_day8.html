@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		body{
+			color: blue;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Starting scripting -->
+
+	<script type="text/javascript">
+
+		//simple printing data using for loop
+
+		document.write("Printing 10 time Names using Loop" + "<br>");
+
+		for (var i =0; i <= 10; i++) 
+		{
+			document.write("Zahid Khattak"+"<br>");
+		}
+
+
+
+
+		// code for table of 10 using for loop
+		document.write("Printing Table of 10 using Loop" + "<br>");
+		var num=10;
+		for (var i =1; i<=10; i++) 
+		{
+			document.write(num+"X"+i+"="+num*i+"<br>");
+		}
+
+		//code for even number
+		var no=14;
+			if(no%2==0)
+			{
+				document.write("The Number" + no + "is even" + "<br>");
+			}
+			else
+			{
+				document.write("the number" + no + "is odd" + "<br> <br>");
+			}
+
+			
+			//Code for prime and composite number
+
+			var input=15;
+			if (input%2==0) 
+			{
+				document.write("The" + input + "is composite" + "<br>" );
+			}
+			else
+			{
+				document.write("The" + input + "is prime");
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dark and light Mode</title>
+<style >
+
+.color{
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+</style>
+</head>
+<body>
+
+	<h1 style="color: red;" align="center">ZAHID KHATTAK</h1>
+
+	<p>Hi, Friends I am zahid khattak from Karak now I lives in Peshawar for studies..</p>
+
+	<button onclick="change();">Dark | Light</button>
+
+
+	<script type="text/javascript">
+	
+	function change()
+	{
+		var element=document.body;
+		element.classList.toggle("color");	
+	}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPA Calculate</title>
+	<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		#maindiv{
+			border: 2px solid black;
+			border-radius: 30px;
+			background-color: #FECDFB;
+		}
+		h2{
+			color: blue;
+		}
+	</style>
+</head>
+<body><br>
+<div class="container" id="maindiv">
+	<center>
+		<h2><u>1st Semester GPA</u></h2>
+	</center>
+
+	<form class="form-group">
+
+								<!--Row 1-->
+
+	<div class="row">
+		<div class="col col-md-3">
+			<label>Subject 1 : </label>
+			<input type="text" id="Subject1" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Grade : </label>
+			<input type="text" id="grade1" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Credit hour : </label>
+			<input type="text" id="ch1" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>GPA : </label>
+			<input type="text" id="gpa1" class="form-control" onchange="add();">
+		</div>
+	</div>
+
+									<!--Row 2-->
+
+	<div class="row">
+		<div class="col col-md-3">
+			<label>Subject 2 : </label>
+			<input type="text" id="Subject2" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Grade : </label>
+			<input type="text" id="grade2" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Credit hour : </label>
+			<input type="text" id="ch2" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>GPA : </label>
+			<input type="text" id="gpa2" class="form-control" onchange="add();">
+		</div>
+	</div>
+
+									<!--Row 3-->
+
+	<div class="row">
+		<div class="col col-md-3">
+			<label>Subject 3 : </label>
+			<input type="text" id="Subject3" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Grade : </label>
+			<input type="text" id="grade3" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3">
+			<label>Credit hour : </label>
+			<input type="text" id="ch3" class="form-control" onchange="add();">
+		</div>
+		<div class="col col-md-3" onchange="add();">
+			<label>GPA : </label>
+			<input type="text" id="gpa3" class="form-control" onchange="add();">
+		</div>
+	</div>
+
+									<!--Row 4-->
+	<div class="row">
+		<div class="col-md-3 offset-6">
+			<label>Total Credit hours</label>
+			<input type="text" id="totalcredith" class="form-control" onchange="add();">
+		</div>
+		<div class="col-md-3">
+			<label>Total GPA</label>
+			<input type="text" id="Totalgpas" class="form-control" onchange="add();">
+		</div>
+	</div><br>
+
+									<!--Row 5 Last Row-->
+
+	<div class="row">
+		<div class="col-md-3 offset-9">
+			<label>CGPA : </label>
+			<input type="text" id="cgpa" class="form-control" onchange="add();">
+		</div>
+	</div><br><br>
+									<!--Row 6 if statement-->
+	<div class="row">
+		<div class="col-md-3 offset-9">
+			<label>Status : </label>
+		<input type="text" id="if" class="form-control" onchange="add();">
+		</div>
+	</div>
+	</form><br>
+</div>
+<script type="text/javascript">
+	function add()
+	 {
+	 	//Function code for 1st subject
+
+		var one=Number(document.getElementById('grade1').value);
+		var two=Number(document.getElementById('ch1').value);
+		var gparesult1=one+two;
+		document.getElementById('gpa1').value=gparesult1;
+
+		//Function code for 2nd subject
+
+		var three=Number(document.getElementById('grade2').value);
+		var four=Number(document.getElementById('ch2').value);
+		var gparesult2=three+four;
+		document.getElementById('gpa2').value=gparesult2;
+
+		//Function code for 3rd subject
+
+		var five=Number(document.getElementById('grade3').value);
+		var six=Number(document.getElementById('ch3').value);
+		var gparesult3=five+six;
+		document.getElementById('gpa3').value=gparesult3;
+
+	
+		//code for adding total credit hours
+
+		var totalch=two+four+six;
+		document.getElementById('totalcredith').value=totalch;
+
+		//code for adding total gpa
+
+		var totalGPA=gparesult1+gparesult2+gparesult3;
+		document.getElementById('Totalgpas').value=totalGPA;
+	
+		//Function code for total gpa
+
+		var CGPA=totalGPA/totalch;
+		document.getElementById('cgpa').value=CGPA;
+		
+		//Function code for if statement
+
+		if (CGPA=>2.5)
+		 {
+		 	document.getElementById('if').value="Congratulation! you are Passed the Exam";
+		}
+		else
+		{
+			document.getElementById('if').value="Sorry! you are failed in the Exam try better next time";
+		}
+	}
+</script>
+</body>
+</html>

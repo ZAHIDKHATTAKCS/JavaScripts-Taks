@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Day7 task 1</title>
+	<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		#maindiv{
+			border: 2px solid red;
+			margin-top: 50px;
+			background-color: #9f77bf;
+		}
+		#table{
+			background-color: white;
+			border: 1px solid red;
+		}
+		h1{
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid" id="maindiv">
+		<h1 align="center">Creating input fields by just clicking</h1>
+		<br><br><br>
+		<div class="row">
+			<div class="col">
+				<table class="table table-bordered table-hover" id="table">
+					<tr>
+						<th>S.No</th>
+						<th>Name</th>
+						<th>Father Name</th>
+						<th>Gender</th>
+						<th>Country</th>
+						<th>Languages</th>
+					</tr>
+					<tbody id="tbody">
+						
+					</tbody>
+				</table>
+				<br>
+				<button class="btn btn-info" onclick="add();">Add</button>
+	</div>
+</div>
+</div>
+	
+	<script>
+		var counter=0;
+		function add()
+		 {
+		 	counter=counter+1;
+			var one="<tr>";
+			one+=counter;
+			one+="<td><input type='text'></td>";
+			one+="<td><input type='text'></td>";
+			one+="<td><input type='radio' Name='Gender'> Male <input type='radio' Name='Gender'> Female </td>";
+			one+="<td><select><option>Pakistan</option> <option>Afghanistan</option> <option> russia </option></select></td>";
+			one+="<td> English : <input type='checkbox'> Urdu : <input type='checkbox'> Pashto : <input type='checkbox'></td>";
+			one+="</tr>";
+			document.getElementById("tbody").insertRow().innerHTML=one;
+		}
+	</script>
+</body>
+</html>

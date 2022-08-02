@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day4 javascript task 2</title>
+	<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		#maindiv{
+			color: red;
+			border: 1px solid red;
+			border-radius: 20px;
+			background-color: lightyellow;
+			height: 600px;
+		}
+		.showform{
+			display: none;
+		}
+		#closebtn{
+			float: right;
+			background: none;
+			background-color: none;
+			border: none;
+
+		}
+		h2{
+			color: red;
+			background-color: yellow;
+			text-align:center;
+			width: 300px;
+		}
+		#last{
+			font-size: 13.5px;
+			padding-top: 3px;
+		}
+		#item1{
+			padding-top: 30px;
+		}
+		#Finalfield{
+			width: 300px;
+			float: right;
+		}
+		
+	</style>
+</head>
+<body><br>
+	<center>
+		<button onclick="add();" class="btn btn-primary">Add Form</button>
+	</center><br>
+
+<div class="container" id="maindiv">
+	<br>
+	<button id="closebtn" onclick="close();">
+		<img src="closebtn.png" width="30px;">
+	</button>
+	<center><h2>Fruits Shop</h2></center><br>
+	
+	<form class="form-group showform" id="form">
+	<div class="row">
+		<h6 id="item1">Mangoes :</h6>
+		<div class="col-md-2">
+			<h6>Quantity : </h6>
+			<input type="text" id="in1" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Price : </h6>
+			<input type="text" id="in2"  onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Total Price : </h6>
+			<input type="text" id="totalprice" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Discount : </h6>
+			<input type="text" id="discount" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6 id="last">Total Price with Discount : </h6>
+			<input type="text" id="total" onchange="calculate();" class="form-control">
+		</div>
+	</div><br><br><br>
+
+								<!--Row 2-->
+
+	<div class="row">
+		<h6 id="item1">Apple :</h6>
+		<div class="col-md-2">
+			<h6>Quantity : </h6>
+			<input type="text" id="qanitity2" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Price : </h6>
+			<input type="text" id="price2"  onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Total Price : </h6>
+			<input type="text" id="subtotal2" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6>Discount : </h6>
+			<input type="text" id="discount2" onchange="calculate();" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<h6 id="last">Total Price with Discount : </h6>
+			<input type="text" id="total2" onchange="calculate();" class="form-control">
+		</div>
+	</div><br><br>
+	<h6 id="Finalfield">Final Price : <input type="text" id="Final" class="form-control"></h6>
+	</form><br><br><br>
+	<center>
+	<button class="btn btn-success">Submit</button>
+	</center>
+</div>
+<script type="text/javascript">
+	function calculate() 
+	{
+		var one=Number(document.getElementById('in1').value);
+		var two=Number(document.getElementById('in2').value);
+		var subtotal=one*two;
+		document.getElementById('totalprice').value=subtotal;
+		var discount=subtotal*10/100;
+		document.getElementById('discount').value=discount;
+		var total=subtotal-discount;
+		document.getElementById('total').value=total;
+
+
+		//Code for 2nd row
+		var a=Number(document.getElementById('qanitity2').value);
+		var b=Number(document.getElementById('price2').value);
+		var subtotal2=a*b;
+		document.getElementById('subtotal2').value=subtotal2;
+		var discount2=subtotal2*10/100;
+		document.getElementById('discount2').value=discount2;
+		var total2=subtotal2-discount2;
+		document.getElementById('total2').value=total2;
+
+		//code for adding final price
+		var final=total+total2;
+		document.getElementById('Final').value=final;
+	}
+
+	function add(){
+		document.getElementById("form").style.display="block";
+	}
+	function close() {
+		document.getElementById("form").style.display="none";
+	}
+</script>
+</body>
+</html>

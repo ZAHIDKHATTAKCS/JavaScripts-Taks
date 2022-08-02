@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="../Bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		body{
+			background-color: pink;
+		}
+		#maindiv{
+			margin-top: 20px;
+			border: 3px solid blue;
+			background-color: yellow;
+		}
+		#Additiondiv{
+			border: 1px solid red;
+			width: 300px;
+			height: auto;
+		}
+		#addbtn{
+			font-size: 20px;
+			width: 40px;
+			height: 10px;
+			text-align: center;
+			padding: auto;
+				}
+		#subtractdiv{
+			border: 1px solid red;
+			width: 300px;
+			height: auto;
+		}
+		#subbtn{
+			font-size: 20px;
+			width: 40px;
+			height: 10px;
+			text-align: center;
+			padding: auto;
+		}
+		#Multiplicationdiv{
+			border: 1px solid red;
+			width: 300px;
+			height: auto;
+		}
+		#Multiplicationbtn{
+			font-size: 20px;
+			width: 40px;
+			height: 10px;
+			text-align: center;
+			padding: auto;
+		}
+		#Divisiondiv{
+			border: 1px solid red;
+			width: 300px;
+			height: auto;
+		}
+		#divisionbtn{
+			font-size: 20px;
+			width: 40px;
+			height: 10px;
+			text-align: center;
+			padding: auto;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid" id="maindiv">
+	<h1 align="center" style="color: blue;">Javascript day2 Task2 Calculator</h1><br><br>
+	<div class="row">
+		<div class="col-md-3" align="center" id="Additiondiv">
+
+					<!--Addition Program-->
+
+		<h2 align="center" style="color: red">Add The Numbers</h2>
+		<input type="text" id="input1"><br>
+		<input type="text" id="input2"><br><br>
+		<input type="text" id="Addresult"><br><br>
+		<button onclick="Add();"><p id="addbtn">+</p></button><br><br>
+		</div>
+
+		<div class="col-md-3" align="center" id="subtractdiv">
+
+					<!--Subtraction Program-->
+		<h2 align="center" style="color: red; font-size: 30px;">Subtract The Numbers</h2>
+		<input type="text" id="num1"><br>
+		<input type="text" id="num2"><br><br>
+		<input type="text" id="subtractresult"><br><br>
+		<button onclick="Sub();"><p id="subbtn">-</p></button><br><br>
+		</div>
+
+		<div class="col-md-3" id="Multiplicationdiv">
+					<!--Multiplication Program-->
+		<h1 align="center" style="color: red; font-size: 30px;">Multiply The Numbers</h1>
+		<input type="text" id="no1"><br>
+		<input type="text" id="no2"><br><br>
+		<input type="text" id="multiplicationresult"><br><br>
+		<button onclick="mul();"><p id="Multiplicationbtn">X</p></button>
+		</div>
+
+		<div class="col-md-3" id="Divisiondiv">
+			<!--Division Program-->
+		<h1 align="center" style="color: red; font-size: 30px;">Divide The Numebrs</h1>
+		<input type="text" id="digit1"><br>
+		<input type="text" id="digit2"><br><br>
+		<input type="text" id="Divisionresult"><br><br>
+		<button onclick="divide();"><p id="divisionbtn">/</p></button><br><br>
+		</div>
+	</div><br><br><br>
+		<h1 align="center" style="color: red;">Made By ZAHID KHATTAK</h1>
+</div>
+	<script type="text/javascript">
+			//Addition program Function
+		function Add()
+		 {
+			var int1=Number(document.getElementById('input1').value);
+			var int2=Number(document.getElementById('input2').value);
+			var int3=int1+int2;
+			document.getElementById('Addresult').value=int3;
+		}
+			//Subtraction program Function
+		function Sub()
+		 {
+		 	var n1=Number(document.getElementById('num1').value);
+		 	var n2=Number(document.getElementById('num2').value);
+		 	var n3=n1-n2;
+		 	document.getElementById('subtractresult').value=n3;
+		}
+			//Multiplication program Function
+		function mul()
+		 {
+			var first=Number(document.getElementById('no1').value);
+			var second=Number(document.getElementById('no2').value);
+			var third=first*second;
+			document.getElementById('multiplicationresult').value=third;
+		}
+
+			//Division Program Function
+		function divide()
+		{
+			var integer1=Number(document.getElementById('digit1').value);
+			var integer2=Number(document.getElementById('digit2').value);
+			var integer3=integer1/integer2;
+			document.getElementById('Divisionresult').value=integer3;
+		}
+	</script>
+</body>
+</html>

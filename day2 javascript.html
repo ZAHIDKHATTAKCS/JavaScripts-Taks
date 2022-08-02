@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript day2</title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<h1 align="center" style="color: red;">Javascript Day2</h1>
+	<p id="pcolor" style="font-size: 20px;">
+		Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.
+	</p><br><br>
+
+	<!--Colors buttons-->
+	<button onclick="Red();" style="color:white; background-color: red;">Red</button>
+	<button onclick="Green();" style="color:white; background-color: green;">Green</button>
+	<button onclick="Blue();" style="color:white; background-color: blue;">Blue</button>
+	<button onclick="Background();">Change Background</button><br><br>
+	<input type="password" id="password">
+	<button type="button" onclick="showpassword()";>ShowPassword</button>
+	<br><br><br>
+
+	
+
+	<!--Multiply by 2 Program-->
+	<input type="text" id="multiply2">
+	<button onclick="multi2();"><sup>X</sup><sub>2</sub></button><br>
+
+
+	<script>
+
+		//Colors buttons functions
+
+
+		function Red()
+		{
+			document.getElementById("pcolor").style.color='red';
+		}
+		function Green()
+		{
+			document.getElementById("pcolor").style.color='green';
+		}
+		function Blue() 
+		{
+			document.getElementById("pcolor").style.color='blue';
+		}
+
+		
+		//background color function
+		function Background() {
+			document.getElementById("pcolor").style.background="lightblue";
+		}
+
+		//show password function
+		function showpassword() 
+		{
+			document.getElementById("password").type='text';
+		}
+		
+		//multiply by 2 program function
+		function multi2() {
+			var value=Number(document.getElementById("multiply2").value);
+			var value2=value*2;
+			document.getElementById("multiply2").value=value2;
+		}
+	</script>
+</body>
+</html>

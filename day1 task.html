@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+<body>
+	<div id="div1">
+		<h1 id="heading1">First day Javascript!</h1>
+		<button type="button" onclick="clicked();"> Click Me</button>
+	</div><br>
+	<div id="div2">
+		<input type="text" id="value1"><br>
+		<input type="text" id="value2"><br>
+		<input type="text" id="result"><br>
+		<button type="button" onclick="Addition();">Calculate Addition</button>
+	</div>
+
+	<script type="text/Javascript">
+	function clicked() 
+	{
+		var myname="ZAHID KHATTAK";
+		var name= document.getElementById("heading1").innerHTML= myname;
+	}
+	function Addition() {
+		var val1= document.getElementById("value1").value;
+		var val2= document.getElementById("value2").value;
+		var sum= val1 + val2;
+		document.getElementById("result").innerHTML= (sum.value);
+	}
+	</script>
+
+</body>
+</html>
